@@ -34,8 +34,8 @@ RUN #apk add --no-cache --virtual build-deps alpine-sdk cmake git libusb-dev && 
     cd build && \
     cmake ../ && \
     make && \
-#    make install && \
-#    apk del build-deps && \
+    make install && \
+    apk del build-deps && \
     rm -r /tmp/src && \
     apk add --no-cache libusb mosquitto-clients jq
 
